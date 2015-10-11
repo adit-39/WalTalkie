@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script>
+			function init()
+			{
+				img = document.getElementById("img");
+				d = img.width/img.height;
+				//alert(d);
+				//img.style.zIndex = "-1";
+				img.style.left = "0px";
+				img.style.top = "0px";
+				img.width = window.innerWidth - 15;
+				img.height = img.height/d - 15;
+				ratio = img.width/img.height;
+				
+				d1.style.position = d2.style.position = d3.style.position = d4.style.position = d5.style.position = d6.style.position = d7.style.position = d8.style.position = d9.style.position = d10.style.position = d11.style.position = "absolute";
+				//d2.style.top = d3.style.top = d4.style.top = d5.style.top = "100px";
+				
+				d1 = document.getElementById("d1");
+				d1.style.top = 1/100 * img.height+"px";
+				d1.style.left = 1/100 * img.width+"px";
+				d1.style.height = 10/100 * img.height+"px";
+				d1.style.width = 24/100 * img.width+"px";
+				d11 = document.getElementById("d11");
+				d11.style.top = 60/100 * img.height+"px";
+				d11.style.left = 1/100 * img.width+"px";
+				d11.style.height = 25/100 * img.height+"px";
+				d11.style.width = 60/100 * img.width+"px";
+				d2 = document.getElementById("d2");
+				d2.style.top = 1/100 * img.height+"px";
+				d2.style.left = 36/100 * img.width+"px";
+				d2.style.height = 10/100 * img.height+"px";
+				d2.style.width = 24/100 * img.width+"px";
+				d3 = document.getElementById("d3");
+				d3.style.top = 1/100 * img.height+"px";
+				d3.style.left = 73/100 * img.width+"px";
+				d3.style.height = 10/100 * img.height+"px";
+				d3.style.width = 24/100 * img.width+"px";
+				d4 = document.getElementById("d4");
+				d4.style.top = 20/100 * img.height+"px";
+				d4.style.left = 1/100 * img.width+"px";
+				d4.style.height = 30/100 * img.height+"px";
+				d4.style.width = 6/100 * img.width+"px";
+				d5 = document.getElementById("d5");
+				d5.style.top = 20/100 * img.height+"px";
+				d5.style.left = 13/100 * img.width+"px";
+				d5.style.height = 30/100 * img.height+"px";
+				d5.style.width = 9/100 * img.width+"px";
+				d6 = document.getElementById("d6");
+				d6.style.top = 20/100 * img.height+"px";
+				d6.style.left = 30/100 * img.width+"px";
+				d6.style.height = 30/100 * img.height+"px";
+				d6.style.width = 9/100 * img.width+"px";
+				d7 = document.getElementById("d7");
+				d7.style.top = 20/100 * img.height+"px";
+				d7.style.left = 45/100 * img.width+"px";
+				d7.style.height = 30/100 * img.height+"px";
+				d7.style.width = 7/100 * img.width+"px";
+				d8 = document.getElementById("d8");
+				d8.style.top = 20/100 * img.height+"px";
+				d8.style.left = 59/100 * img.width+"px";
+				d8.style.height = 30/100 * img.height+"px";
+				d8.style.width = 8/100 * img.width+"px";
+				d9 = document.getElementById("d9");
+				d9.style.top = 20/100 * img.height+"px";
+				d9.style.left = 75/100 * img.width+"px";
+				d9.style.height = 30/100 * img.height+"px";
+				d9.style.width = 7/100 * img.width+"px";
+				d10 = document.getElementById("d10");
+				d10.style.top = 20/100 * img.height+"px";
+				d10.style.left = 91/100 * img.width+"px";
+				d10.style.height = 30/100 * img.height+"px";
+				d10.style.width = 6/100 * img.width+"px";
+				content = document.getElementById("content");
+				d1.onmouseout = d2.onmouseout = d3.onmouseout = d4.onmouseout = d5.onmouseout = d6.onmouseout = d7.onmouseout = d8.onmouseout = d9.onmouseout = d10.onmouseout = d.onmouseout = clear;
+			}
+			function milk(event)
+			{
+				show("1 ltr: 20 nos<br>500 ml: 100 nos<br>offers: 10% discount on all products");
+			}
+			function crowd(event)
+			{
+				show("2 Queues empty<br>Total 40 people in queue currently");
+			}
+			function deli(event)
+			{
+				show("1 ltr: 20 nos<br>500 ml: 100 nos<br>offers: 10% discount on all products");
+			}
+			function bakery(event)
+			{
+				show("1 ltr: 20 nos<br>500 ml: 100 nos<br>offers: 10% discount on all products");
+			}
+			function alcohol(event)
+			{
+				show("1 ltr: 20 nos<br>500 ml: 100 nos<br>offers: 10% discount on all products");
+			}
+			function chemist(event)
+			{
+				show("1 ltr: 20 nos<br>500 ml: 100 nos<br>offers: 10% discount on all products");
+			}
+			function electronics(event)
+			{
+				show("1 ltr: 20 nos<br>500 ml: 100 nos<br>offers: 10% discount on all products");
+			}
+			function jams(event)
+			{
+				show("1 ltr: 20 nos<br>500 ml: 100 nos<br>offers: 10% discount on all products");
+			}
+			function fruits(event)
+			{
+				show("1 ltr: 20 nos<br>500 ml: 100 nos<br>offers: 10% discount on all products");
+			}
+			function vegetable(event)
+			{
+				show("1 ltr: 20 nos<br>500 ml: 100 nos<br>offers: 10% discount on all products");
+			}
+			function show(str)
+			{
+				content.style.display = "block";
+				content.innerHTML = str;
+			}
+			function clear()
+			{
+				//alert("works");
+				content.innerHTML = "";
+				content.style.display = "none";
+			}
+		</script>
+	</head>
+	<body onload="init();clear()" >
+		<img src = "floorplans.jpg" oncontextmenu="event.preventDefault();" id = "img">
+			<div onmouseover = "milk()" onmouseout = "clear()" id = "d1"></div>
+			<div onmouseover = "deli()" onmouseout = "clear()" id = "d2"></div>
+			<div onmouseover = "bakery()" onmouseout = "clear()" id = "d3"></div>
+			<div onmouseover = "alcohol()" onmouseout = "clear()" id = "d4"></div>
+			<div onmouseover = "chemist()" onmouseout = "clear()" id = "d5"></div>
+			<div onmouseover = "electronics()" onmouseout = "clear()" id = "d6"></div>
+			<div onmouseover = "electronics()" onmouseout = "clear()" id = "d7"></div>
+			<div onmouseover = "jams()" onmouseout = "clear()" id = "d8"></div>
+			<div onmouseover = "fruits()" onmouseout = "clear()" id = "d9"></div>
+			<div onmouseover = "vegetable()" onmouseout = "clear()" id = "d10"></div>
+			<div onmouseover = "crowd()" onmouseout = "clear()" id = "d11"></div>
+		</img>
+		<div style="border:3px solid white;background-color: blue;color: white;position:absolute;left:33%;top:33%;" onmouseout="clear()" id = "content">
+		
+	</body>
+</html>
