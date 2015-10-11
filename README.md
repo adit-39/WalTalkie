@@ -1,2 +1,2 @@
 # WalTalkie
-Walmart Labs Hackathon
+Walmart Labs Hack Fest 2015 @ Hackerearth
