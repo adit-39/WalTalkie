@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rel"
+    android:layout_width="match_parent"
+    android:layout_height="45dp"
+    android:background="#ffffff"
+    android:orientation="vertical"
+    android:padding="15dp" >
+
+    <ImageButton
+        android:id="@+id/remove"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_alignParentRight="true"
+        android:background="@android:color/transparent"
+        android:maxHeight="20dp"
+        android:maxWidth="20dp"
+        android:src="@drawable/remove" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="3"
+        android:padding="3dp"
+        android:text="Medium Text"
+        android:textSize="20dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:padding="3dp"
+        android:text="Small Text"
+        android:textSize="10dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="40dp"
+        android:textStyle="italic" />
+
+    <TextView
+        android:id="@+id/quantity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:padding="3dp"
+        android:text="Small Text"
+        android:textSize="10dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:textStyle="italic" />
+
+</RelativeLayout>

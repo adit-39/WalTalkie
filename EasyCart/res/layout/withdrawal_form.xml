@@ -1,0 +1,71 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="15dp"
+    android:background="#e8e8e8" >
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="24dp"
+            android:text="Item Name:"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <EditText
+            android:id="@+id/entry"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/textView1"
+            android:layout_alignBottom="@+id/textView1"
+            android:layout_alignLeft="@+id/OKButton"
+            android:ems="10"
+            android:inputType="textAutoComplete|textCapWords" >
+
+            <requestFocus />
+        </EditText>
+
+        <TextView
+            android:id="@+id/words"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/qu"
+            android:layout_below="@+id/qtyentry"
+            android:layout_marginTop="19dp"
+            android:text="Price:"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <TextView
+            android:id="@+id/qu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/textView1"
+            android:layout_below="@+id/entry"
+            android:layout_marginTop="26dp"
+            android:text="Quantity:"
+            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+        <EditText
+            android:id="@+id/qtyentry"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/qu"
+            android:layout_alignLeft="@+id/entry"
+            android:ems="10"
+            android:hint="Enter in no. of units"
+            android:inputType="number" />
+
+        <Button
+            android:id="@+id/OKButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/words"
+            android:layout_centerHorizontal="true"
+            android:background="#880000"
+            android:text="OK"
+            android:textColor="#ffffff" />
+
+</RelativeLayout>

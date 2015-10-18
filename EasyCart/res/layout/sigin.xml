@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:background="@drawable/back">
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:text="PLEASE SIGN IN"
+        android:textAppearance="?android:attr/textAppearanceLarge" 
+        style="@style/button_text"/>
+
+    <EditText
+        android:id="@+id/usernam"
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        android:background="@drawable/textbox"
+        android:layout_marginTop="55dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:paddingLeft="10dp"
+        android:hint="User Name"
+    />
+    
+     <EditText
+         android:id="@+id/passw"
+         android:layout_width="fill_parent"
+         android:layout_height="45dp"
+         android:layout_marginLeft="5dp"
+         android:layout_marginRight="5dp"
+         android:layout_marginTop="30dp"
+         android:background="@drawable/textbox"
+         android:hint="Password"
+         android:inputType="textPassword"
+         android:paddingLeft="10dp" />
+     
+     <Button
+        android:background="@drawable/button"
+        android:id="@+id/maps"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:text="SIGN IN"
+        android:onClick="login"
+        style="@style/button_text" />
+     
+      <Button
+        android:background="@drawable/button"
+        android:id="@+id/fill"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:text="FILL FORMS OFFLINE"
+        style="@style/button_text" />
+     
+</LinearLayout>
+

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#d8d8d8"
+    android:orientation="vertical" 
+    android:padding="15dp">
+
+   <TextView
+    android:id="@+id/bank_balance"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="25dp"
+    android:text="Current Bank Balance\n\nRs. 50,000"
+    android:textSize="20dp"
+    android:background="#ffffff"/>
+
+    <TextView
+        android:id="@+id/emi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/bank_balance"
+        android:layout_below="@+id/bank_balance"
+        android:layout_marginTop="22dp"
+        android:background="#ffffff"
+        android:padding="25dp"
+        android:text="Current EMI withstanding:\n\nRs. 0.0"
+        android:textSize="20dp" />
+    
+    <TextView
+        android:id="@+id/offers"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/bank_balance"
+        android:layout_below="@+id/emi"
+        android:layout_marginTop="22dp"
+        android:background="#ffffff"
+        android:padding="25dp"
+        android:text="Click here for Best Plans/Offers"
+        android:textSize="20dp" />
+    
+
+</RelativeLayout>
