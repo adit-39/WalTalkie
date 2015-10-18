@@ -81,10 +81,10 @@ public class FormAdapter extends BaseAdapter {
 				sp = contextF[0].getSharedPreferences("price",
 						Context.MODE_PRIVATE);
 				temp = sp.getString("prices", "NA");
-//				ed = sp.edit();
-//				ed.putString("prices",
-//						Utils.removeItem(tv.getText().toString(), temp).split(";")[1]);
-//				ed.commit();
+				ed = sp.edit();
+				ed.putString("prices",
+						Utils.removeItem(tv.getText().toString(), temp).split(";")[1]);
+				ed.commit();
 //				
 				sp = contextF[0].getSharedPreferences("qty",
 						Context.MODE_PRIVATE);
@@ -99,8 +99,10 @@ public class FormAdapter extends BaseAdapter {
 //						Utils.removeItem(tv.getText().toString(), temp),
 //						Toast.LENGTH_LONG).show();
 				FormsFragment.form_items.remove(positionF[0]);
-//				FormsFragment.qty_items.remove(positionF[0]);
-//				FormsFragment.price_items.remove(positionF[0]);
+				
+				FormsFragment.qty_items.remove(positionF[0]);
+				if(positionF[0]<FormsFragment.price_items.size())
+					FormsFragment.price_items.remove(positionF[0]);
 				othis.notifyDataSetChanged();
 				parentF[0].postInvalidate();
 			}

@@ -29,30 +29,30 @@ public class QRViewFragment extends Fragment {
 				false);
 
 		final String result[] = { "" };
-//		Thread t = new Thread(new Runnable() {
-//			public void run() {
-//				HttpClient Client = new DefaultHttpClient();
-//				HttpGet httpget = new HttpGet(Utils.IP + "/api/costn/"
-//						+ Utils.getMACAddress("wlan0"));
-//				ResponseHandler<String> responseHandler = new BasicResponseHandler();
-//				try {
-//					result[0] = Client.execute(httpget, responseHandler);
-//					((TextView)getActivity().findViewById(R.id.qrcode)).setText("Total price: "+result[0]);
-//				} catch (ClientProtocolException e) {
-//					// TODO Auto-generated catch block
-//					e.printStackTrace();
-//				} catch (IOException e) {
-//					// TODO Auto-generated catch block
-//					e.printStackTrace();
-//				}
-//			}
-//		});
-//		t.start();
+		Thread t = new Thread(new Runnable() {
+			public void run() {
+				HttpClient Client = new DefaultHttpClient();
+				HttpGet httpget = new HttpGet(Utils.IP + "/api/costn/"
+						+ Utils.getMACAddress("wlan0"));
+				ResponseHandler<String> responseHandler = new BasicResponseHandler();
+				try {
+					result[0] = Client.execute(httpget, responseHandler);
+					((TextView)getActivity().findViewById(R.id.qrcode)).setText("Total price: "+result[0]);
+				} catch (ClientProtocolException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				} catch (IOException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+			}
+		});
+		t.start();
 
-//		WebView web = (WebView) container.findViewById(R.id.qrcode);
-//		web.getSettings().setJavaScriptEnabled(true);
-//		web.getSettings().setBuiltInZoomControls(false);
-////		web.loadUrl(Utils.IP+"api/checkout/"+Utils.getMACAddress("wlan0"));
+		WebView web = (WebView) rootView.findViewById(R.id.qrcode);
+		web.getSettings().setJavaScriptEnabled(true);
+		web.getSettings().setBuiltInZoomControls(false);
+		web.loadUrl(Utils.IP+"api/checkout/"+Utils.getMACAddress("wlan0"));
 //		web.loadUrl("http://192.168.1.5/Walmart%20hackathon/qrcode.png");
 		// if(MainActivity.flag)
 		// i.setVisibility(1);

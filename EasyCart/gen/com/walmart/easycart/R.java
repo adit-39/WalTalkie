@@ -564,7 +564,6 @@ containing a value of this type.
         public static final int holo_light=0x7f070009;
         public static final int hybrid=0x7f070007;
         public static final int imageButton1=0x7f07003d;
-        public static final int imageView1=0x7f070035;
         public static final int left_drawer=0x7f070032;
         public static final int list=0x7f07003c;
         public static final int logo_only=0x7f070013;
@@ -578,6 +577,7 @@ containing a value of this type.
         public static final int passw=0x7f070043;
         public static final int price=0x7f070039;
         public static final int production=0x7f07000a;
+        public static final int qrcode=0x7f070035;
         public static final int qtyentry=0x7f07004a;
         public static final int qu=0x7f070049;
         public static final int quantity=0x7f07003a;

@@ -164,7 +164,6 @@ int id holo_dark 0x7f070008
 int id holo_light 0x7f070009
 int id hybrid 0x7f070007
 int id imageButton1 0x7f07003d
-int id imageView1 0x7f070035
 int id left_drawer 0x7f070032
 int id list 0x7f07003c
 int id logo_only 0x7f070013
@@ -178,6 +177,7 @@ int id offers 0x7f070041
 int id passw 0x7f070043
 int id price 0x7f070039
 int id production 0x7f07000a
+int id qrcode 0x7f070035
 int id qtyentry 0x7f07004a
 int id qu 0x7f070049
 int id quantity 0x7f07003a

@@ -542,70 +542,70 @@ public class MainActivity extends FragmentActivity {
 
 	private void dialog_callback() {
 
-//		final String result[] = { "" };
-//		Thread t = new Thread(new Runnable() {
-//			public void run() {
-//				HttpClient Client = new DefaultHttpClient();
-//				HttpPost httppost = new HttpPost(Utils.IP + "/api/updatelist/"
-//						+ Utils.getMACAddress("wlan0"));
-//				String Name = "";
-//				for (int i = 0; i < FormsFragment.form_items.size(); i++) {
-//					Name += FormsFragment.form_items.get(i) + ","
-//							+ FormsFragment.qty_items.get(i) + ";";
-//				}
-//				Name = Name.substring(0, Name.length() - 1);
-//
-//				ResponseHandler<String> responseHandler = new BasicResponseHandler();
-//				try {
-//					BasicNameValuePair data = new BasicNameValuePair("items",
-//							Name);
-//					ArrayList<BasicNameValuePair> d = new ArrayList<BasicNameValuePair>();
-//					d.add(data);
-//					httppost.setEntity(new UrlEncodedFormEntity(d));
-//					result[0] = Client.execute(httppost, responseHandler);
-//					SharedPreferences pp = getSharedPreferences("price",
-//							Context.MODE_PRIVATE);
-//					SharedPreferences p = getSharedPreferences("ItemList",
-//							Context.MODE_PRIVATE);
-//					SharedPreferences ppp = getSharedPreferences("qty",
-//							Context.MODE_PRIVATE);
-//
-//					Editor ed1 = p.edit();
-//					Editor ed2 = pp.edit();
-//					Editor ed3 = ppp.edit();
-//					String s1 = "", s2 = "", s3 = "";
-//					String res[] = result[0].split(";");
-//					for (int i = 0; i < res.length; i++) {
-//						s1 += res[i].split(",")[0];
-//						s2 += res[i].split(",")[1];
-//						s3 += res[i].split(",")[2];
-//					}
-//					s1 = s1.substring(0, s1.length() - 1);
-//					s2 = s2.substring(0, s1.length() - 1);
-//					s3 = s3.substring(0, s1.length() - 1);
-//
-//					ed1.putString("ItemList", s1);
-//					ed2.putString("prices", s2);
-//					ed3.putString("qty", s3);
-//
-//					ed1.commit();
-//					ed2.commit();
-//					ed3.commit();
-//
-//				} catch (ClientProtocolException e) {
-//					e.printStackTrace();
-//				} catch (IOException e) {
-//					e.printStackTrace();
-//				}
-//			}
-//		});
-//		t.start();
-//		try {
-//			t.join();
-//		} catch (InterruptedException e) {
-//			// TODO Auto-generated catch block
-//			e.printStackTrace();
-//		}
+		final String result[] = { "" };
+		Thread t = new Thread(new Runnable() {
+			public void run() {
+				HttpClient Client = new DefaultHttpClient();
+				HttpPost httppost = new HttpPost(Utils.IP + "/api/updatelist/"
+						+ Utils.getMACAddress("wlan0"));
+				String Name = "";
+				for (int i = 0; i < FormsFragment.form_items.size(); i++) {
+					Name += FormsFragment.form_items.get(i) + ","
+							+ FormsFragment.qty_items.get(i) + ";";
+				}
+				Name = Name.substring(0, Name.length() - 1);
+
+				ResponseHandler<String> responseHandler = new BasicResponseHandler();
+				try {
+					BasicNameValuePair data = new BasicNameValuePair("items",
+							Name);
+					ArrayList<BasicNameValuePair> d = new ArrayList<BasicNameValuePair>();
+					d.add(data);
+					httppost.setEntity(new UrlEncodedFormEntity(d));
+					result[0] = Client.execute(httppost, responseHandler);
+					SharedPreferences pp = getSharedPreferences("price",
+							Context.MODE_PRIVATE);
+					SharedPreferences p = getSharedPreferences("ItemList",
+							Context.MODE_PRIVATE);
+					SharedPreferences ppp = getSharedPreferences("qty",
+							Context.MODE_PRIVATE);
+
+					Editor ed1 = p.edit();
+					Editor ed2 = pp.edit();
+					Editor ed3 = ppp.edit();
+					String s1 = "", s2 = "", s3 = "";
+					String res[] = result[0].split(";");
+					for (int i = 0; i < res.length; i++) {
+						s1 += res[i].split(",")[0];
+						s2 += res[i].split(",")[1];
+						s3 += res[i].split(",")[2];
+					}
+					s1 = s1.substring(0, s1.length() - 1);
+					s2 = s2.substring(0, s1.length() - 1);
+					s3 = s3.substring(0, s1.length() - 1);
+
+					ed1.putString("ItemList", s1);
+					ed2.putString("prices", s2);
+					ed3.putString("qty", s3);
+
+					ed1.commit();
+					ed2.commit();
+					ed3.commit();
+
+				} catch (ClientProtocolException e) {
+					e.printStackTrace();
+				} catch (IOException e) {
+					e.printStackTrace();
+				}
+			}
+		});
+		t.start();
+		try {
+			t.join();
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 
 		fragmentManager = getSupportFragmentManager();
 		FormsFragment fragment = new FormsFragment(this);

@@ -37,23 +37,23 @@ public class First extends Activity implements LocationListener {
 		locationManager.requestLocationUpdates(LocationManager.GPS_PROVIDER, 0,
 				0, this);
 
-//		 WifiManager wifi = (WifiManager)
-//		 getSystemService(Context.WIFI_SERVICE);
-//		 WifiConfiguration wc = new WifiConfiguration();
-//		 wc.SSID = "\"Walmart\"";
-//		 wc.preSharedKey = "\"qwerty123456\"";
-//		 wc.hiddenSSID = true;
-//		 wc.status = WifiConfiguration.Status.ENABLED;
-//		 wc.allowedGroupCiphers.set(WifiConfiguration.GroupCipher.TKIP);
-//		 wc.allowedGroupCiphers.set(WifiConfiguration.GroupCipher.CCMP);
-//		 wc.allowedKeyManagement.set(WifiConfiguration.KeyMgmt.WPA_PSK);
-//		 wc.allowedPairwiseCiphers.set(WifiConfiguration.PairwiseCipher.TKIP);
-//		 wc.allowedPairwiseCiphers.set(WifiConfiguration.PairwiseCipher.CCMP);
-//		 wc.allowedProtocols.set(WifiConfiguration.Protocol.RSN);
-//		 int res = wifi.addNetwork(wc);
-//		 Log.d("WifiPreference", "add Network returned " + res);
-//		 boolean b = wifi.enableNetwork(res, true);
-//		 Log.d("WifiPreference", "enableNetwork returned " + b);
+		 WifiManager wifi = (WifiManager)
+		 getSystemService(Context.WIFI_SERVICE);
+		 WifiConfiguration wc = new WifiConfiguration();
+		 wc.SSID = "\"Walmart\"";
+		 wc.preSharedKey = "\"qwerty123456\"";
+		 wc.hiddenSSID = true;
+		 wc.status = WifiConfiguration.Status.ENABLED;
+		 wc.allowedGroupCiphers.set(WifiConfiguration.GroupCipher.TKIP);
+		 wc.allowedGroupCiphers.set(WifiConfiguration.GroupCipher.CCMP);
+		 wc.allowedKeyManagement.set(WifiConfiguration.KeyMgmt.WPA_PSK);
+		 wc.allowedPairwiseCiphers.set(WifiConfiguration.PairwiseCipher.TKIP);
+		 wc.allowedPairwiseCiphers.set(WifiConfiguration.PairwiseCipher.CCMP);
+		 wc.allowedProtocols.set(WifiConfiguration.Protocol.RSN);
+		 int res = wifi.addNetwork(wc);
+		 Log.d("WifiPreference", "add Network returned " + res);
+		 boolean b = wifi.enableNetwork(res, true);
+		 Log.d("WifiPreference", "enableNetwork returned " + b);
 		Thread logoTimer = new Thread() {
 			public void run() {
 				try {

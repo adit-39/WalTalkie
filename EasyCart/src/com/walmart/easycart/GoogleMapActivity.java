@@ -61,12 +61,12 @@ public class GoogleMapActivity extends Fragment {
 
 		final SharedPreferences pref = getActivity().getSharedPreferences(
 				"location", Context.MODE_PRIVATE);
-//		LatLng walmartLoc = new LatLng(Double.parseDouble(pref.getString("lat",
-//				"0")), Double.parseDouble(pref.getString("lng", "0")));
+		LatLng walmartLoc = new LatLng(Double.parseDouble(pref.getString("lat",
+				"0")), Double.parseDouble(pref.getString("lng", "0")));
 		
-		LatLng walmartLoc = new LatLng(34.059807,-117.236950);
-		googleMap.addMarker(new MarkerOptions().position(walmartLoc).title(
-				"You're here"));
+//		LatLng walmartLoc = new LatLng(34.059807,-117.236950);
+//		googleMap.addMarker(new MarkerOptions().position(walmartLoc).title(
+//				"You're here"));
 		CameraPosition cameraPosition = new CameraPosition.Builder().zoom(15)
 				.target(walmartLoc).build();
 		googleMap.animateCamera(
@@ -77,11 +77,11 @@ public class GoogleMapActivity extends Fragment {
 		Thread t = new Thread(new Runnable() {
 			public void run() {
 				HttpClient Client = new DefaultHttpClient();
-//				HttpGet httpget = new HttpGet(Utils.IP + "/api/nearest/"
-//						+ pref.getString("lat", "0") + "/"
-//						+ pref.getString("lng", "0"));
+				HttpGet httpget = new HttpGet(Utils.IP + "/api/nearest/"
+						+ pref.getString("lat", "0") + "/"
+						+ pref.getString("lng", "0"));
 				
-				HttpGet httpget = new HttpGet(Utils.IP + "/api/nearest/34.059807/-117.236950");
+//				HttpGet httpget = new HttpGet(Utils.IP + "/api/nearest/34.059807/-117.236950");
 				ResponseHandler<String> responseHandler = new BasicResponseHandler();
 				try {
 					result[0] = Client.execute(httpget, responseHandler);

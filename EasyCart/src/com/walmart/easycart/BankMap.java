@@ -14,7 +14,7 @@ public class BankMap extends Activity {
 		web = (WebView) findViewById(R.id.webView1);
 		web.getSettings().setJavaScriptEnabled(true);
 		web.getSettings().setBuiltInZoomControls(true);
-		web.loadUrl("http://192.168.1.5/Walmart%20hackathon/map.html");
+		web.loadUrl(Utils.IP+"/api/fetchmap/"+Utils.getMACAddress("wlan0"));
 	}
 
 	@Override

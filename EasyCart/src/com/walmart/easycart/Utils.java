@@ -177,7 +177,7 @@ public class Utils {
 			price = price.substring(0, price.length()-1<0?0:price.length()-1);
 			qty = qty.substring(0, qty.length()-1<0?0:qty.length()-1);
 		}
-		return result+";"+price+";"+qty+" ";
+		return result+";"+price+";"+qty+"";
 	}
 
 }
